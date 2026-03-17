@@ -1,0 +1,15 @@
+.timer {
+  margin: 20px 0;
+}
+
+.timer-display {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #3a6351;
+  font-family: monospace;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+} 

@@ -1,0 +1,27 @@
+.duration-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.duration-button {
+  background-color: #f0ece3;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.duration-button:hover {
+  background-color: #e6e2d9;
+}
+
+.duration-button.selected {
+  background-color: #3a6351;
+  color: white;
+  border-color: #3a6351;
+} 

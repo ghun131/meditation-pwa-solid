@@ -1,0 +1,31 @@
+{
+    "name": "Thiền Trúc Lâm app",
+    "short_name": "Thiền Trúc Lâm app",
+    "description": "Ứng dụng thiền có hướng dẫn",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8f5f2",
+    "theme_color": "#3a6351",
+    "icons": [
+        {
+            "src": "/truc-lam-meditation.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "/truc-lam-meditation180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/truc-lam-meditation152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/truc-lam-meditation120.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        }
+    ]
+}

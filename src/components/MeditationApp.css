@@ -1,0 +1,243 @@
+.meditation-app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f5f2;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.meditation-app h2 {
+  color: #3a6351;
+  margin-bottom: 20px;
+}
+
+.meditation-app p {
+  color: #5d5d5d;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.start-button, .reset-button {
+  background-color: #3a6351;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.start-button:hover, .reset-button:hover {
+  background-color: #2a4b3c;
+}
+
+.setup-screen, .preparing-screen, .intro-screen, .meditation-screen, .ending-screen, .completed-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+/* Preparation countdown styles */
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.countdown {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #3a6351;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #3a6351;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 rgba(58, 99, 81, 0.3);
+  }
+  to {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(58, 99, 81, 0.5);
+  }
+}
+
+/* Hidden audio player */
+.hidden-audio-player {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Animation for the intro screen */
+.breathing-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Remove the breathe animation since we're using spin now */
+@keyframes breathe {
+  0% {
+    transform: scale(0.9);
+    background-color: rgba(58, 99, 81, 0.6);
+    box-shadow: 0 0 5px rgba(58, 99, 81, 0.2);
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: rgba(58, 99, 81, 0.9);
+    box-shadow: 0 0 20px rgba(58, 99, 81, 0.4);
+  }
+  100% {
+    transform: scale(0.9);
+    background-color: rgba(58, 99, 81, 0.6);
+    box-shadow: 0 0 5px rgba(58, 99, 81, 0.2);
+  }
+}
+
+.breathing-text {
+  color: #3a6351;
+  font-size: 1.2rem;
+  animation: fadeText 4s infinite ease-in-out;
+}
+
+@keyframes fadeText {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.skip-button {
+  background-color: transparent;
+  color: #3a6351;
+  border: 1px solid #3a6351;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+.skip-button:hover {
+  background-color: rgba(58, 99, 81, 0.1);
+}
+
+.wake-lock-status {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Styles for the name input in completed stage */
+.name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.input {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #3a6351;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333333;
+  width: 200px;
+  box-shadow: 0 2px 6px rgba(58, 99, 81, 0.15);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #2a4b3c;
+  box-shadow: 0 4px 8px rgba(58, 99, 81, 0.25);
+}
+
+.input::placeholder {
+  color: #a0a0a0;
+  opacity: 0.8;
+}
+
+.copy-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3a6351;
+}
+
+.copy-button:hover {
+  background-color: rgba(58, 99, 81, 0.1);
+}
+
+.copy-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.copy-button svg {
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover svg {
+  transform: scale(1.1);
+}
+
+.name-button {
+  background-color: #f8f5f2;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-decoration: none;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.name-button:hover {
+  background-color: rgba(58, 99, 81, 0.05);
+}
